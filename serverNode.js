@@ -66,13 +66,15 @@ app.post('/sendMessage', (req, res) => {
                 if(err) return console.error(err)
                 console.log(body);
             });
-        }
 
+            admin.database().ref('/message').push({message: broadcastMessage, toUserID: uniqueUserID[i]});
+        }
 
     }
 
+    
 
-   res.send('Message has been broadcast.');
+    res.send('Message has been broadcast.');
 });
 
 
