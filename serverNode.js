@@ -34,6 +34,12 @@ app.get('/', function (req, res){
 
 });
 
+// for getting error in database if something went wrong
+function errData(err){
+    console.log('Error!');
+    console.log(err);
+}
+
 // This responds a POST request for the homepage
 app.post('/sendMessage', (req, res) => {
     
@@ -48,11 +54,6 @@ app.post('/sendMessage', (req, res) => {
             let k = keys[i];
             user_id[i] = convo[k].user_id;
         }
-    // for getting error in database if something went wrong
-    function errData(err){
-        console.log('Error!');
-        console.log(err);
-    }
     // getting uniqueID to avoid repetition of sending message
     let uniqueUserID = Array.from(new Set(user_id));
     console.log("uniqueID: ", uniqueUserID);
