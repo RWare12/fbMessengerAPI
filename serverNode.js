@@ -72,7 +72,7 @@ app.post('/sendMessage', (req, res) => {
     }
 
 
-   res.send('Hello POST');
+   res.send('Message has been broadcast.');
 });
 
 // var items = [1721885347926613,1721885347926612,1721885347926612,1721885347926613,4,4]
