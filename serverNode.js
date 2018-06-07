@@ -75,8 +75,5 @@ app.post('/sendMessage', (req, res) => {
    res.send('Message has been broadcast.');
 });
 
-// var items = [1721885347926613,1721885347926612,1721885347926612,1721885347926613,4,4]
-// var uniqueItems = Array.from(new Set(items))
-// console.log("unique ",uniqueItems);
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
