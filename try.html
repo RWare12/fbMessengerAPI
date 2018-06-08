@@ -1,15 +1,46 @@
 <html>
     <head>
     </head>
+    <style>
+        h1 {
+            text-transform: uppercase;
+            color: #000;
+        }
+
+        body {
+                background: #2851A6 url("http://i.stack.imgur.com/spmUM.gif") left repeat-x;
+            background-size: auto;
+            background-position: bottom;
+        }
+
+        textarea {
+            width: 25%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            resize: none;
+        }
+
+
+        input[type=submit] {padding:15px 15px; background:#ccc; border:0 none;
+        cursor:pointer;
+        -webkit-border-radius: 5px;
+        border-radius: 5px; }
+    </style>
 
     <body onload="onload();">
-        <h1 id = "demo2"></h1>
-        <p id="demo">Message:</p>
+        <center><h1><font face="verdana">Message:</font></h1>
 
-        <form action="/sendMessage" method="post">
-            <input type="text" name="message" id="message">
+        <form action="/sendMessage" method="post" onsubmit="buttonName.disabled=true; return true;">
+            <textarea rows="10" cols="50" name="message" id="message" placeholder="Enter Message"> </textarea>
+            <br>
             <input type="submit" name="send">
+            </br>
         </form>
+        </center>
     </body>
 
 </html>
